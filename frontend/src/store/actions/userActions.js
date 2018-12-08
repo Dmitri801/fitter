@@ -1,8 +1,10 @@
 import { GET_AUTHED_USER } from "./types";
 import axios from "axios";
+const productionAPI = "https://bfittrapi.dmiwebtree.com";
+const devAPI = "http://localhost:3030";
 export const getAuthedUser = (token, id) => async dispatch => {
   try {
-    const url = `http://localhost:3030/api/users/${id}`;
+    const url = `${productionAPI}/api/users/${id}`;
 
     const response = await axios.get(url, {
       headers: {
