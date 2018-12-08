@@ -1,0 +1,238 @@
+@media screen and (max-width: 485px) {
+  .register_container {
+    .main_logo {
+      top: 30px;
+      right: 20px;
+      width: 100%;
+      h1 {
+        font-size: 1.1em;
+      }
+      svg {
+        height: 70px;
+        width: 70px;
+      }
+    }
+    .form_card {
+      width: 100%;
+      h2 {
+        text-decoration: none;
+        font-size: 1.3em;
+        top: 30px;
+      }
+      form {
+        width: 110%;
+        .form_team {
+          width: 80%;
+          margin-right: 20px;
+        }
+        .login_btn {
+          width: 60%;
+          margin-right: 20px;
+        }
+        .next_back_btn_container {
+          width: 80%;
+          span {
+            width: 50%;
+          }
+        }
+        .next_back_btn_container.two {
+          span {
+            position: absolute;
+            left: 40px;
+            color: transparent;
+          }
+          .register_btn {
+            left: 25%;
+            width: 50%;
+            font-size: 0.5em;
+            margin-top: 10px;
+          }
+        }
+      }
+      p {
+        left: 20%;
+      }
+    }
+  }
+  .login_container {
+    .main_logo {
+      top: 30px;
+      font-size: 1.5em;
+      width: 100%;
+      right: 20px;
+      h1 {
+        font-size: 2.2em;
+      }
+      svg {
+        height: 70px;
+        width: 70px;
+      }
+    }
+    .form_card {
+      width: 100%;
+
+      form {
+        .form_team {
+          width: 80%;
+        }
+        .login_btn {
+          width: 60%;
+          margin-right: 20px;
+        }
+      }
+      p {
+        margin-right: 30px;
+      }
+    }
+  }
+  .landing_container {
+    header {
+      display: flex;
+      h1 {
+        display: flex;
+        width: 100%;
+        padding: 10px;
+      }
+      .landing_logo {
+        font-size: 1em;
+      }
+      .login_btn {
+        position: relative;
+        width: 40%;
+        font-size: 0.5em;
+        margin-left: auto;
+        right: 0;
+        top: 0;
+        height: 35px;
+      }
+    }
+    .landing_showcase {
+      .headline {
+        font-size: 2.5em;
+      }
+      .register_btn {
+        font-size: 1.5em;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .err_container {
+    .err_msg {
+      width: 70%;
+      font-size: 1.2em;
+
+      .close_icon {
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 486px) and (max-width: 591px) {
+  .register_container {
+    .main_logo {
+      top: 30px;
+      right: 20px;
+      width: 100%;
+      h1 {
+        font-size: 1.3em;
+      }
+      svg {
+        height: 70px;
+        width: 70px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 486px) and (max-width: 1023px) {
+  .login_container {
+    .form_card {
+      width: 100%;
+      margin-left: 10px;
+      form {
+        .form_team {
+          width: 80%;
+          margin-right: 20px;
+        }
+        .login_btn {
+          width: 60%;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  .landing_container {
+    header {
+      display: flex;
+      h1 {
+        display: flex;
+        width: 100%;
+        padding: 10px;
+      }
+      .landing_logo {
+        font-size: 2em;
+      }
+      .login_btn {
+        position: relative;
+        width: 40%;
+        font-size: 0.5em;
+        margin-left: auto;
+        right: 0;
+        top: 0;
+        height: 35px;
+      }
+    }
+    .landing_showcase {
+      .headline {
+        font-size: 3em;
+      }
+      .register_btn {
+        font-size: 1.5em;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+  .register_container {
+    .form_card {
+      h2 {
+        position: relative;
+        margin-bottom: 0;
+      }
+      p {
+        left: 30%;
+      }
+      form {
+        .form_team:nth-child(1) {
+          margin-top: 30px !important;
+        }
+        .form_team {
+          width: 80%;
+        }
+        .next_back_btn_container {
+          width: 80%;
+
+          .register_btn {
+            width: 30%;
+            font-size: 0.7em;
+          }
+        }
+      }
+    }
+  }
+
+  .err_container {
+    .err_msg {
+      width: 70%;
+      font-size: 1.5em;
+    }
+  }
+}

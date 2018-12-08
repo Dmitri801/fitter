@@ -1,0 +1,54 @@
+$primary-dark: #040505;
+$primary-color: #87c232;
+$secondary-color: #567e2a;
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC|Playfair+Display|Unlock");
+@import "login";
+@import "register";
+@import "landing";
+
+body,
+html,
+#root,
+.App {
+  height: 100%;
+  background: $primary-dark;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: $primary-dark;
+  color: #fff;
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+// UI
+input.invalid[type="text"],
+input.invalid[type="email"],
+input.invalid[type="password"] {
+  border: 0.6px solid rgba(red, 0.5) !important;
+}
+
+.main_spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
+  border-top: 8px solid $primary-color;
+  border-right: 3px solid transparent;
+  animation: spinner 0.9s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@import "mobile";

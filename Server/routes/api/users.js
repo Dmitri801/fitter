@@ -7,16 +7,24 @@ const router = express.Router();
 // Passport routes config
 const requireAuth = passport.authenticate("jwt", { session: false });
 const requireSignIn = passport.authenticate("local", { session: false });
+
 // @route GET
 // @desc Get all users
 // Private
 
-router.get("/users", requireAuth, (req, res, next) => {
+router.get("/", requireAuth, (req, res, next) => {
   User.find({}).then(doc =>
     res.json({
       users: doc
     })
   );
+});
+
+// @route GET
+// @desc Get user by ID
+// Private
+router.get("/:id", requireAuth, (req, res, next) => {
+  User.findById(req.params.id).then(doc => res.status(200).json(doc));
 });
 
 // @route POST
@@ -29,6 +37,6 @@ router.post("/register", Auth.register);
 // @desc Login User
 // Public
 
-router.post("/login", requireSignIn, Auth.signIn);
+router.post("/login", Auth.signIn);
 
 module.exports = router;

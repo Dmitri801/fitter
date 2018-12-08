@@ -17,29 +17,15 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+
+  goals: {
+    type: String,
+    default: "Get Fittr"
+  },
   admin: {
     type: String,
     default: false
   }
-});
-
-// Bcrypt password encryption
-
-UserSchema.pre("save", function(next) {
-  const user = this;
-
-  bcrypt.genSalt(10, (err, salt) => {
-    if (err) {
-      return next(err);
-    }
-    bcrypt.hash(user.password, salt, null, (err, hash) => {
-      if (err) {
-        return next(err);
-      }
-      user.password = hash;
-      next();
-    });
-  });
 });
 
 UserSchema.methods.validPassword = function(password, callback) {

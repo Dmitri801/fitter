@@ -6,6 +6,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const users = require("./routes/api/users");
 const passport = require("passport");
+const cors = require("cors");
 const PORT = process.env.PORT || 3030;
 require("dotenv").config();
 const app = express();
@@ -26,12 +27,13 @@ app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(session({ secret: "Whatev", resave: true, saveUninitialized: true }));
 app.use(flash());
+app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 require("./auth/passport.js");
 
 // User API
-app.use("/api", users);
+app.use("/api/users", users);
 
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
