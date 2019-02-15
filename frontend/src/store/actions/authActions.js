@@ -1,6 +1,6 @@
 import { AUTH_USER, AUTH_ERROR, CLEAR_ERROR } from "./types";
 import axios from "axios";
-const productionAPI = "https://bfittrapi.dmiwebtree.com";
+// const productionAPI = "https://bfittrapi.dmiwebtree.com";
 const devAPI = "http://localhost:3030";
 export const registerUser = (
   { firstName, lastName, email, password, confirmPassword, goals },
@@ -17,7 +17,7 @@ export const registerUser = (
     };
     try {
       const response = await axios.post(
-        `${productionAPI}/api/users/register`,
+        `${devAPI}/api/users/register`,
         newUser
       );
       console.log(response.data);
@@ -57,10 +57,7 @@ export const registerUser = (
 export const signInUser = (formProps, callback) => {
   return async function(dispatch) {
     try {
-      const response = await axios.post(
-        `${productionAPI}/api/users/login`,
-        formProps
-      );
+      const response = await axios.post(`${devAPI}/api/users/login`, formProps);
 
       dispatch({
         type: AUTH_USER,

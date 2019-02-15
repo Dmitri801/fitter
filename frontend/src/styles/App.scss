@@ -23,6 +23,9 @@ body {
 }
 
 // UI
+input {
+  border: 0.6px solid transparent !important;
+}
 input.invalid[type="text"],
 input.invalid[type="email"],
 input.invalid[type="password"] {
